@@ -126,7 +126,7 @@ app.get('/api/videos/:id', (req, res) => {
 
 app.get('/api/videos/:id/related', (req, res) => {
   const related = videoData.filter((item) => item.id !== req.params.id).slice(0, 4);
-  res.json({ ok: true, data: related });
+  return res.json({ ok: true, data: related });
 });
 
 app.get('/api/videos/:id/downloads', (req, res) => {
@@ -136,7 +136,7 @@ app.get('/api/videos/:id/downloads', (req, res) => {
     return res.status(404).json({ ok: false, error: 'Video not found.' });
   }
 
-  res.json({ ok: true, data: video.downloads ?? [] });
+  return res.json({ ok: true, data: video.downloads ?? [] });
 });
 
 app.get('/api/videos/:id/stream', (req, res) => {
