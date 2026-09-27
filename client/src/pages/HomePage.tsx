@@ -1,4 +1,4 @@
-import { Building2, Download, PlayCircle, Search } from 'lucide-react';
+import { Building2, Download, PlayCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { mockVideos, mockGenres, mockArtists } from '../data/mockData';
 import MusicVideoCard, { SectionHeader } from '../components/MusicVideoCard';
@@ -59,18 +59,14 @@ export default function HomePage() {
       <section>
         <SectionHeader eyebrow="Trending" title="Hot right now" action="View all" actionTo="/trending" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {trending.map((video) => (
-            <MusicVideoCard key={video.id} video={video} />
-          ))}
+          {trending.map((video) => <MusicVideoCard key={video.id} video={video} />)}
         </div>
       </section>
 
       <section>
         <SectionHeader eyebrow="Fresh" title="Latest music videos" action="Browse all" actionTo="/search" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {latest.map((video) => (
-            <MusicVideoCard key={video.id} video={video} />
-          ))}
+          {latest.map((video) => <MusicVideoCard key={video.id} video={video} />)}
         </div>
       </section>
 
@@ -109,9 +105,7 @@ export default function HomePage() {
       <section>
         <SectionHeader eyebrow="More" title="More music videos" action="Search" actionTo="/search" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {mockVideos.slice(2).map((video) => (
-            <MusicVideoCard key={video.id} video={video} />
-          ))}
+          {mockVideos.slice(2).map((video) => <MusicVideoCard key={video.id} video={video} />)}
         </div>
       </section>
     </div>

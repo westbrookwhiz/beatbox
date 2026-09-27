@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
-import { mockGenres, mockVideos } from '../data/mockData';
-import { EmptyState } from '../components/MusicVideoCard';
+import MusicVideoCard, { EmptyState } from '../components/MusicVideoCard';
+import { mockVideos } from '../data/mockData';
 
 export default function GenresPage() {
   return (

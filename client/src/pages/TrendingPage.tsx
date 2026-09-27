@@ -1,7 +1,6 @@
-import { useParams, Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import MusicVideoCard, { EmptyState } from '../components/MusicVideoCard';
-import { mockGenres, mockVideos } from '../data/mockData';
+import { mockVideos } from '../data/mockData';
 
 export default function TrendingPage() {
   const trendingVideos = mockVideos;
