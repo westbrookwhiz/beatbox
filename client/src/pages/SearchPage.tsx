@@ -1,6 +1,5 @@
 import { Search, X } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
 import MusicVideoCard, { EmptyState } from '../components/MusicVideoCard';
 import { mockVideos } from '../data/mockData';
 
