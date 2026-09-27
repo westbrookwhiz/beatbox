@@ -1,5 +1,6 @@
-import MusicVideoCard, { EmptyState } from '../components/MusicVideoCard';
-import { mockVideos } from '../data/mockData';
+import { Link } from 'react-router-dom';
+import { mockGenres } from '../data/mockData';
+import { EmptyState } from '../components/MusicVideoCard';
 
 export default function GenresPage() {
   return (
